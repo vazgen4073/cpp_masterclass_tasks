@@ -1,20 +1,6 @@
-Create a complete project with Makefile and tests which contains the following function:
+Implement a function which returns the maximum number in the given array.
+The function could look like this:
 
-std::vector<int> primeFactorize(int n);
+int max(int array[], int size);
 
-The function must return a collection of integers which contains the prime factors of the given number. 
-For example, the prime factors of 125 are 5, 5 and 5. The prime factors of 60 are 2, 2, 3 and 5.
-
-std::vector<int> is a dynamic collection of integers which can be filled in using push_back() method using the following code snippet
-
-std::vector<int> result;
-result.push_back(value);
-
-The project should not have a main() function. The code should be on GitHub.
-
-Try to cover the function code with tests as good as possible using test-driven development (TDD) approach.
-
-Three rules of TDD:
-1. Write production code only to pass a failing unit test.
-2. Write no more of a unit test than sufficient to fail (compilation failures are failures).
-3. Write no more production code than necessary to pass the one failing unit test.
+Use TDD while implementing. The tests should show the process.
