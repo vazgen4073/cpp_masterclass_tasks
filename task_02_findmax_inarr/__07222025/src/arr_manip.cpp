@@ -5,31 +5,23 @@
 
 int max(int array[], int size)
 {
-    int res = 0;
-    if (size < 2) {
-        res = array[0];
-        return res;
-    } 
-
-    int stat1_res = 0;
-    if (array[0] > array[1]) {
-        stat1_res = array[0];
-    } else {
-        stat1_res = array[1];
+    if (array == NULL) {
+        return INT32_MIN;
     }
+    
+    int res = array[0];
+    if (size > 2) {
 
-    int stat2_res = 0;
+        for (int i = 1; i < size; ++i) {
+            if (array[i] > res) {
+                res = array[i];
+            }
+        }
 
-    if (array[1] > array[2]) {
-        stat2_res = array[1];
-    } else {
-        stat2_res = array[2];
-    }
-
-    if (stat1_res > stat2_res) {
-        res = stat1_res;
-    } else {
-        res = stat2_res;
+    } else if (size == 2) {
+        if (res < array[1]) {
+            res = array[1];
+        }
     }
 
     return res;
